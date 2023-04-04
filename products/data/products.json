@@ -1,0 +1,68 @@
+[
+    {
+      "name": "Innova Champion Destroyer",
+      "description": "The Innova Champion Destroyer is a fast and stable distance driver designed for maximum distance off the tee. With a combination of speed, glide, and fade, this disc is perfect for players of all skill levels.",
+      "price": 16.99,
+      "manufacturer": "Innova",
+      "type": "Distance Driver",
+      "speed": 12,
+      "glide": 5,
+      "turn": -1,
+      "fade": 3,
+      "weight": "175g",
+      "color": "Blue"
+    },
+    {
+      "name": "Dynamic Discs Truth",
+      "description": "The Dynamic Discs Truth is a versatile midrange disc that can be used for a variety of shots. It has a straight flight path with a moderate amount of glide and a reliable fade at the end. This disc is perfect for both beginners and experienced players.",
+      "price": 14.99,
+      "manufacturer": "Dynamic Discs",
+      "type": "Midrange",
+      "speed": 5,
+      "glide": 5,
+      "turn": 0,
+      "fade": 2,
+      "weight": "175g",
+      "color": "Green"
+    },
+    {
+      "name": "Latitude 64 Opto Sapphire",
+      "description": "The Latitude 64 Opto Sapphire is a beginner-friendly distance driver that has a high degree of glide and a moderate amount of turn. This disc is great for players who are just starting out or who want to improve their distance.",
+      "price": 15.99,
+      "manufacturer": "Latitude 64",
+      "type": "Distance Driver",
+      "speed": 10,
+      "glide": 6,
+      "turn": -2,
+      "fade": 1,
+      "weight": "168g",
+      "color": "Orange"
+    },
+    {
+      "name": "Discraft Buzzz",
+      "description": "The Discraft Buzzz is one of the most popular midrange discs on the market. It has a straight flight path with minimal fade, making it great for accurate shots. This disc is perfect for both beginners and experienced players.",
+      "price": 13.99,
+      "manufacturer": "Discraft",
+      "type": "Midrange",
+      "speed": 5,
+      "glide": 4,
+      "turn": -1,
+      "fade": 1,
+      "weight": "175g",
+      "color": "Pink"
+    },
+    {
+      "name": "MVP Neutron Photon",
+      "description": "The MVP Neutron Photon is a high-speed distance driver with a reliable fade at the end of its flight. It has a good amount of glide and can handle a variety of wind conditions. This disc is perfect for experienced players who want to maximize their distance.",
+      "price": 17.99,
+      "manufacturer": "MVP",
+      "type": "Distance Driver",
+      "speed": 11,
+      "glide": 5,
+      "turn": -1,
+      "fade": 3,
+      "weight": "170g",
+      "color": "Red"
+    }
+  ]
+  

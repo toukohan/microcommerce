@@ -1,0 +1,35 @@
+{
+    "categories": [
+      {
+        "id": 1,
+        "name": "Clothing",
+        "description": "Shop for men's and women's clothing.",
+        "image": "https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+      },
+      {
+        "id": 2,
+        "name": "Shoes",
+        "description": "Find your perfect pair of shoes.",
+        "image": "https://images.unsplash.com/photo-1600054904350-1d493ae5f922?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzJ8fHNob2VzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+      },
+      {
+        "id": 3,
+        "name": "Electronics",
+        "description": "Get the latest electronics and gadgets.",
+        "image": "https://images.unsplash.com/photo-1593344484962-796055d4a3a4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fGVsZWN0cm9uaWNzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+      },
+      {
+        "id": 4,
+        "name": "Home & Garden",
+        "description": "Decorate your home with our selection of furniture and decor.",
+        "image": "https://images.unsplash.com/photo-1514053026555-49ce8886ae41?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGhvbWUlMjAlMjYlMjBnYXJkZW58ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
+      },
+      {
+        "id": 5,
+        "name": "Beauty & Personal Care",
+        "description": "Discover our collection of skincare and beauty products.",
+        "image": "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OTd8fGJlYXV0eSUyMCUyNiUyMHBlcnNvbmFsJTIwY2FyZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+      }
+    ]
+  }
+  
