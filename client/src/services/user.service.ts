@@ -6,11 +6,11 @@ const api = axios.create({
 
 export const getUser = async (id: string) => {
     try {
-        const response = await api.get(`/${id}`);
+        const response = await api.get(`/${id}`);   
         return response.data;
     } catch (error) {
         if(error instanceof Error) {
-        console.error(`Error fetching user with id ${id}: ${(error as Error).message}`);
+        console.error(`Error fetching user with id ${id}: ${error.message}`);
         throw error;
         } else {
         console.error(`Error fetching user with id ${id}: ${error}`);
