@@ -8,10 +8,18 @@ AppDataSource.initialize().then(async () => {
 
     console.log("Inserting a new user into the database...")
     const user = new User()
-    user.firstName = "Timber"
-    user.lastName = "Saw"
-    user.age = 25
-    await AppDataSource.manager.save(user)
+    user.firstName = "Supreme"
+    user.lastName = "Leader"
+    user.email = "admin"
+    user.password = "admin"
+    user.role = "admin"
+    await AppDataSource.manager
+        .createQueryBuilder()
+        .insert()
+        .into(User)
+        .values(user)
+        .orIgnore()
+        .execute();
     console.log("Saved a new user with id: " + user.id)
 
     console.log("Loading users from the database...")
