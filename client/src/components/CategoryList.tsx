@@ -6,15 +6,16 @@ const CategoryList = () => {
     const { data, isLoading, error } = useQuery("categories", getCategories)
 
     if (isLoading) {
-        return <p>Loading...</p>
+        return <p className="p-5">Loading...</p>
     }
 
     if (error) {
-        return <p>There was an error</p>
+
+        return <p className="p-5">There was an error</p>
     }
 
     return (
-        <div className="flex flex-wrap justify-center">
+        <>
             {data.categories.map((category: any) => (
                 <Link to={`/products/${category.id}`} key={category.id}>
                     <div key={category.id} className="flex flex-col items-center justify-center m-5 relative">
@@ -23,7 +24,7 @@ const CategoryList = () => {
                     </div>
                 </Link>
             ))}
-        </div>
+        </>
     )
 }
 

@@ -5,8 +5,14 @@ const api = axios.create({
 });
 
 export const getProducts = async () => {
-    const response = await api.get('/');
-    return response.data;
+    try {
+        const response = await api.get('/');
+        return response.data;
+        
+    } catch (error) {
+        console.error(error);    
+        return [];
+    }
 };
 
 export const getProduct = async (id: string) => {
