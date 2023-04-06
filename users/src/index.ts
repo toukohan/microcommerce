@@ -20,18 +20,24 @@ AppDataSource.initialize().then(async () => {
         .values(user)
         .orIgnore()
         .execute();
-    console.log("Saved a new user with id: " + user.id)
+    // console.log("Saved a new user with id: " + user.id)
 
     console.log("Loading users from the database...")
     const users = await AppDataSource.manager.find(User)
     console.log("Loaded users: ", users)
 
-    console.log("Here you can setup and run express / fastify / any other framework.")
+    // console.log("Here you can setup and run express / fastify / any other framework.")
     
     app.use(express.json());
 
     app.get('/', (req, res) => {
     res.json(users);
+    });
+
+    app.get('/:id', async (req, res) => {
+        const id = parseInt(req.params.id);
+        const user = await AppDataSource.manager.findOne(User, { where: { id } });
+        res.json(user);
     });
 
     app.listen(4001, () => {
