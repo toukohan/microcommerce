@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-    baseURL: 'http://localhost:4001',
+    baseURL: import.meta.env.VITE_PRODUCT_SERVICE_URL,
 });
 
 export const getProducts = async () => {

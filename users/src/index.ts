@@ -1,8 +1,11 @@
 import { AppDataSource } from "./data-source"
 import { User } from "./entity/User"
 import express from 'express';
+import cors from 'cors';
 
 const app = express();
+
+const port = 4002;
 
 AppDataSource.initialize().then(async () => {
 
@@ -29,6 +32,7 @@ AppDataSource.initialize().then(async () => {
     // console.log("Here you can setup and run express / fastify / any other framework.")
     
     app.use(express.json());
+    app.use(cors());
 
     app.get('/', (req, res) => {
     res.json(users);
@@ -40,8 +44,8 @@ AppDataSource.initialize().then(async () => {
         res.json(user);
     });
 
-    app.listen(4001, () => {
-    console.log('Listening on port 4001');
+    app.listen(port, () => {
+    console.log(`User service listening at http://localhost:${port}`);
     });
         
 
