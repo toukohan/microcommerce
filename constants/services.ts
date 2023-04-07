@@ -1,0 +1,1 @@
+export const eventServiceUrl = 'http://localhost:4005/events';
