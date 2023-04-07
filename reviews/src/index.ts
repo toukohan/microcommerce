@@ -1,11 +1,10 @@
 import express from 'express';
 import cors from 'cors';
 import axios from 'axios';
-
+import { eventServiceUrl } from '../../constants/services';
 import { query } from './db';
 
 const port = 4006;
-const eventServiceUrl = 'http://localhost:4005/events';
 
 const app = express();
 app.use(cors());
