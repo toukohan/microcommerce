@@ -8,16 +8,19 @@ export const getProducts = async () => {
     try {
         const response = await api.get('/');
         return response.data;
-        
     } catch (error) {
-        console.error(error);    
-        return [];
+        if(error instanceof Error) {
+        console.error(`Error fetching products: ${error.message}`);
+        throw error;
+        } else {
+        console.error(`Error fetching products: ${error}`);
+        throw error;
+        }
     }
 };
 
 export const getProduct = async (id: string) => {
-    const response = await api.get(`/${id}`);
-    return response.data;
+    
 };
 
 export const createProduct = async (product: any) => {

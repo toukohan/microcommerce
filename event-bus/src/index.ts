@@ -1,7 +1,12 @@
 import express from 'express';
 import axios from 'axios';
+import cors from 'cors';
 
 const app = express();
+const port = 4005;
+
+app.use(express.json());
+app.use(cors());
 
 app.post('/events', (req, res) => {
     const event = req.body;
@@ -13,6 +18,6 @@ app.post('/events', (req, res) => {
     res.send({ status: 'OK' });
 });
 
-app.listen(4005, () => {
-    console.log('Listening on 4005');
+app.listen(port, () => {
+    console.log(`Event Bus listening on port ${port}`);
 });

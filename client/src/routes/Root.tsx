@@ -5,6 +5,7 @@ import Navigation from '../components/Navigation'
 
 export const rootLoader = async () => {
     const products = await getProducts();
+    if(!products) return [];
     return products;
 }
 
