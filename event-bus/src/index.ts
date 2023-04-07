@@ -1,6 +1,14 @@
 import express from 'express';
 import axios from 'axios';
 import cors from 'cors';
+import { query } from './db';
+
+import { 
+    usersServiceUrl,
+    productsServiceUrl,
+    reviewsServiceUrl,
+    moderationServiceUrl
+} from '../../constants/services';
 
 const app = express();
 const port = 4005;
@@ -8,13 +16,35 @@ const port = 4005;
 app.use(express.json());
 app.use(cors());
 
-app.post('/events', (req, res) => {
+app.get('/events', async (req, res) => {
+    try {
+        const events = await query('SELECT * FROM events', []);
+        res.json(events.rows);
+
+    } catch (error) {
+        if(error instanceof Error) {
+            res.status(500).json({ message: error.message });
+        }
+    }
+});
+
+
+app.post('/', (req, res) => {
     const event = req.body;
 
-    axios.post("http://localhost:4000/events", event);
-    axios.post("http://localhost:4001/events", event);
-    axios.post("http://localhost:4002/events", event);
-
+    axios.post(`${usersServiceUrl}/events`, event).catch((err) => {
+        console.log(err.message);
+    });
+    axios.post(`${productsServiceUrl}/events`, event).catch((err) => {
+        console.log(err.message);
+    });
+    axios.post(`${reviewsServiceUrl}/events`, event).catch((err) => {
+        console.log(err.message);
+    });
+    axios.post(`${moderationServiceUrl}/events`, event).catch((err) => {
+        console.log(err.message);
+    });
+   
     res.send({ status: 'OK' });
 });
 
